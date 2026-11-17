@@ -1,5 +1,7 @@
 # Zotero 阅读配置 · Zotero Reading Setup
 
+[下载配置包](https://github.com/JinPengLGM/zotero-reading-setup/releases/download/v1.1.0/zotero-reading-setup-1.1.0.zip) · [安装教程](docs/INSTALL.md) · [版本发布](https://github.com/JinPengLGM/zotero-reading-setup/releases) · [故障排查](docs/TROUBLESHOOTING.md)
+
 把 Zotero 配成一个可以精读论文、写思路、引用选文与 AI 对话、按需翻译和阅读代码的工作台。
 
 这是从日常使用配置中整理出的可复现版本：**源码 + 版本锁定 + 安装准备脚本 + 自动配置预设**。使用者登录自己的 Codex 账号、填写自己的翻译 API，即可复制同样的阅读工作流。
