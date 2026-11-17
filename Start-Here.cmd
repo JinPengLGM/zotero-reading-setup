@@ -11,5 +11,5 @@ if errorlevel 1 (
   exit /b 1
 )
 echo.
-echo Open Zotero: Tools - Plugins. Install the three numbered core XPI files.
+echo Open Zotero: Tools - Plugins. Install the numbered XPI files in dist, then restart Zotero.
 pause

@@ -9,6 +9,7 @@
     "extensions.zotero.ZoteroPDFTranslate.enableDict": false,
     "extensions.zotero.ZoteroPDFTranslate.enablePopup": false,
     "extensions.zotero.ZoteroPDFTranslate.fontSize": "16",
+    "extensions.zotero.ZoteroPDFTranslate.hideUnconfiguredServices": true,
     "extensions.zotero.ZoteroPDFTranslate.lineHeight": "1.7",
     "extensions.zotero.ZoteroPDFTranslate.renameServices.customgpt1": "DeepSeek Flash",
     "extensions.zotero.ZoteroPDFTranslate.showSidebarConcat": false,

@@ -1,5 +1,6 @@
 param([switch]$IncludeOptional, [switch]$Offline, [switch]$NoOpen)
 $ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue' # Avoid the slow per-packet console repaint in Windows PowerShell 5.
 $root = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $output = Join-Path $root 'dist'
 $lock = Get-Content -LiteralPath (Join-Path $root 'dependencies.lock.json') -Raw -Encoding UTF8 | ConvertFrom-Json
