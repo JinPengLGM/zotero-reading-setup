@@ -65,6 +65,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\build.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\prepare.ps1 -IncludeOptional -NoOpen
 ```
 
+维护者在 Git checkout 中执行 `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\package.ps1` 可生成发布 ZIP、XPI 和 SHA256 清单；ZIP 仅包含本仓库文件与阅读随想，不再分发上游插件二进制。
+
 测试覆盖翻译流、分段、取消、缓存、错误状态、缺失 Codex 路径修复、代码内容保真、HTML 转义、稿件行号识别及配置的备份/恢复。源码的原生阅读交互已在基线机器上实际使用；自动测试不等于对所有操作系统和 Zotero 版本的兼容保证。详细范围见 [验证记录](docs/VALIDATION.md)。
 
 首次共享版由本地 1.0.14 整理而来；1.1.0 新增可复现安装与可恢复预设。见 [CHANGELOG](CHANGELOG.md)。
