@@ -79,8 +79,14 @@ var ReadingSetupPreset = (() => {
   }
   return {
     async start(rootURI) {
-      config = JSON.parse(await Zotero.File.getContentsAsync(rootURI + 'preset-config.json'));
-      sidebarCSS = await Zotero.File.getContentsAsync(rootURI + 'reader-sidebar.css');
+      // A jar: URL passed as a string is routed to Zotero.HTTP and fails URI
+      // parsing. A Gecko channel works for both installed XPI and file roots.
+      const {NetUtil} = ChromeUtils.importESModule('resource://gre/modules/NetUtil.sys.mjs');
+      const read = name => Zotero.File.getContentsAsync(NetUtil.newChannel({
+        uri: rootURI + name, loadUsingSystemPrincipal: true
+      }), 'UTF-8');
+      config = JSON.parse(await read('preset-config.json'));
+      sidebarCSS = await read('reader-sidebar.css');
       if (config.schema !== 1 || !config.preferences) throw new Error('不支持的阅读配置预设');
       if (!Services.prefs.prefHasUserValue(marker)) apply();
       Zotero.ReaderThoughtsSetup = {apply, restore, status: () => ({

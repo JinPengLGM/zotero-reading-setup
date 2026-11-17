@@ -9,7 +9,7 @@ const values=new Map([[key,'stacked'],[secrets,'local-private-placeholder']]);
 const defaults=new Map([[model,'upstream-default']]);
 let saved=0;
 const clock={setInterval:()=>1,clearInterval(){}};
-const ctx={Object,JSON,Zotero:{Prefs:{get:k=>values.has(k)?values.get(k):defaults.get(k),set:(k,v)=>values.set(k,v)},File:{getContentsAsync:async url=>url.endsWith('.css')?'/* reader only */':config},getMainWindow:()=>clock,getMainWindows:()=>[]},Services:{prefs:{prefHasUserValue:k=>values.has(k),clearUserPref:k=>values.delete(k),savePrefFile:()=>saved++}}};
+const ctx={Object,JSON,ChromeUtils:{importESModule:()=>({NetUtil:{newChannel:options=>{assert.equal(options.loadUsingSystemPrincipal,true);return {channelURI:options.uri};}}})},Zotero:{Prefs:{get:k=>values.has(k)?values.get(k):defaults.get(k),set:(k,v)=>values.set(k,v)},File:{getContentsAsync:async(channel,charset)=>{assert.equal(typeof channel,'object');assert.equal(charset,'UTF-8');return channel.channelURI.endsWith('.css')?'/* reader only */':config;}},getMainWindow:()=>clock,getMainWindows:()=>[]},Services:{prefs:{prefHasUserValue:k=>values.has(k),clearUserPref:k=>values.delete(k),savePrefFile:()=>saved++}}};
 vm.createContext(ctx);vm.runInContext(source,ctx);
 (async()=>{
  await ctx.ReadingSetupPreset.start('jar:fixture!/');

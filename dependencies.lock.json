@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "baseline": "2026-11-17",
-  "zotero": {"tested": "10.0.7", "supportedMajor": 10},
+  "zotero": {"readerBaseline": "10.0.7", "presetTested": "10.0.8", "supportedMajor": 10},
   "addons": [
     {
       "name": "LLM for Zotero", "version": "3.9.17", "optional": false,

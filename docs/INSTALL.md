@@ -2,7 +2,7 @@
 
 ## 1. 准备 Zotero
 
-本配置以 **Windows / Zotero 10.0.7** 为验证基线。请先从 [Zotero 官网](https://www.zotero.org/download/) 安装兼容的 Zotero 10，再下载本仓库的 Release ZIP 或源码 ZIP 并完整解压。其他主版本尚未验证。
+本配置面向 **Windows / Zotero 10**；阅读功能在 10.0.7 使用验证，共享预设在 10.0.8 完成原生验证。请先从 [Zotero 官网](https://www.zotero.org/download/) 安装兼容的 Zotero 10，再下载本仓库的 Release ZIP 或源码 ZIP 并完整解压。其他主版本尚未验证。
 
 双击 `Start-Full.cmd` 准备全部 5 个插件，或双击 `Start-Here.cmd` 准备 3 个核心插件。PowerShell 的 ExecutionPolicy Bypass 只对这次准备进程生效，不会修改系统策略。准备脚本只在仓库的 `dist` 文件夹生成或下载文件，不会修改 Zotero 个人资料目录。
 

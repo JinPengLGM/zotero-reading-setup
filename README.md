@@ -4,7 +4,7 @@
 
 这是从日常使用配置中整理出的可复现版本：**源码 + 版本锁定 + 安装准备脚本 + 自动配置预设**。使用者登录自己的 Codex 账号、填写自己的翻译 API，即可复制同样的阅读工作流。
 
-**已验证基线：Windows / Zotero 10.0.7，2026-11-17。** 扩展依赖 Zotero 10 的内部阅读器接口；Zotero 7/8/9/11、macOS、Linux 尚未验证，不能保证直接可用。
+**已验证平台：Windows / Zotero 10。** 阅读功能基线为 10.0.7；共享预设在 10.0.8 完成原生验证（2026-11-17）。扩展依赖 Zotero 10 的内部阅读器接口；Zotero 7/8/9/11、macOS、Linux 尚未验证，不能保证直接可用。
 
 ## 最快开始
 
@@ -65,7 +65,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\build.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\prepare.ps1 -IncludeOptional -NoOpen
 ```
 
-测试覆盖翻译流、分段、取消、缓存、错误状态、缺失 Codex 路径修复、代码内容保真、HTML 转义、稿件行号识别及配置的备份/恢复。源码的原生阅读交互已在基线机器上实际使用；自动测试不等于对所有操作系统和 Zotero 版本的兼容保证。
+测试覆盖翻译流、分段、取消、缓存、错误状态、缺失 Codex 路径修复、代码内容保真、HTML 转义、稿件行号识别及配置的备份/恢复。源码的原生阅读交互已在基线机器上实际使用；自动测试不等于对所有操作系统和 Zotero 版本的兼容保证。详细范围见 [验证记录](docs/VALIDATION.md)。
 
 首次共享版由本地 1.0.14 整理而来；1.1.0 新增可复现安装与可恢复预设。见 [CHANGELOG](CHANGELOG.md)。
 
