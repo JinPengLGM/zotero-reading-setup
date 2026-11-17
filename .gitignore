@@ -1,0 +1,17 @@
+/dist/
+/downloads/
+/node_modules/
+*.log
+*.tmp
+*.xpi
+*.zip
+*.pdf
+*.sqlite*
+prefs.js
+user.js
+auth.json
+.env
+.env.*
+!.env.example
+credentials*
+*secret*.local*

@@ -1,0 +1,12 @@
+{
+  "name": "zotero-reading-setup",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Reproducible Zotero reading, Codex chat, translation and code-reading setup",
+  "license": "MIT",
+  "scripts": {
+    "test": "node scripts/test.cjs",
+    "check": "node scripts/check.cjs"
+  },
+  "engines": {"node": ">=20"}
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "baseline": "2026-11-17",
+  "preferences": {
+    "extensions.zotero.ZoteroPDFTranslate.customGPT1.model": "deepseek-flash",
+    "extensions.zotero.ZoteroPDFTranslate.customGPT1.temperature": "0.2",
+    "extensions.zotero.ZoteroPDFTranslate.customGPT1.thinkingLevel": "off",
+    "extensions.zotero.ZoteroPDFTranslate.enableAuto": false,
+    "extensions.zotero.ZoteroPDFTranslate.enableDict": false,
+    "extensions.zotero.ZoteroPDFTranslate.enablePopup": false,
+    "extensions.zotero.ZoteroPDFTranslate.fontSize": "16",
+    "extensions.zotero.ZoteroPDFTranslate.lineHeight": "1.7",
+    "extensions.zotero.ZoteroPDFTranslate.renameServices.customgpt1": "DeepSeek Flash",
+    "extensions.zotero.ZoteroPDFTranslate.showSidebarConcat": false,
+    "extensions.zotero.ZoteroPDFTranslate.showSidebarCopy": false,
+    "extensions.zotero.ZoteroPDFTranslate.showSidebarSettings": false,
+    "extensions.zotero.ZoteroPDFTranslate.targetLanguage": "zh-CN",
+    "extensions.zotero.ZoteroPDFTranslate.translateSource": "googleapi",
+    "extensions.zotero.llmforzotero.codexAppServerModel": "gpt-6.1-sol",
+    "extensions.zotero.llmforzotero.codexAppServerReasoning": "high",
+    "extensions.zotero.llmforzotero.conversationSystem": "codex",
+    "extensions.zotero.llmforzotero.enableCodexAppServerMode": true,
+    "extensions.zotero.llmforzotero.messageLineSpacing": 160,
+    "extensions.zotero.llmforzotero.panelFontScale": 110,
+    "extensions.zotero.llmforzotero.sidebarLayout": "independent",
+    "extensions.zotero.readingThoughts.ignoreDraftLineNumbers": true,
+    "extensions.zotero.zoterostyle.annotationColors": "[[\"关键结论\",\"#ffd400\"],[\"疑问与局限\",\"#ff6666\"],[\"方法与实现\",\"#5fb236\"],[\"数据与证据\",\"#2ea8e5\"],[\"我的想法\",\"#a28ae5\"],[\"相关工作\",\"#e56eee\"],[\"术语与定义\",\"#f19837\"],[\"背景与待核\",\"#aaaaaa\"]]",
+    "extensions.zotero.zoterostyle.annotationColorsGroups": "[[\"论文精读\",[[\"关键结论\",\"#ffd400\"],[\"疑问与局限\",\"#ff6666\"],[\"方法与实现\",\"#5fb236\"],[\"数据与证据\",\"#2ea8e5\"],[\"我的想法\",\"#a28ae5\"],[\"相关工作\",\"#e56eee\"],[\"术语与定义\",\"#f19837\"],[\"背景与待核\",\"#aaaaaa\"]]]]",
+    "extensions.zotero.zoterostyle.function.showAnnotationColorName.enable": true
+  }
+}

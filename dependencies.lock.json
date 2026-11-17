@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "baseline": "2026-11-17",
+  "zotero": {"tested": "10.0.7", "supportedMajor": 10},
+  "addons": [
+    {
+      "name": "LLM for Zotero", "version": "3.9.17", "optional": false,
+      "id": "zotero-llm@github.com.yilewang", "file": "01-llm-for-zotero-3.9.17.xpi",
+      "url": "https://github.com/yilewang/llm-for-zotero/releases/download/v3.9.17/llm-for-zotero.xpi",
+      "homepage": "https://github.com/yilewang/llm-for-zotero",
+      "sha256": "a7593175f042f9df96805e6fc335bef659e5ebcdce733fa89afea0341fb57011"
+    },
+    {
+      "name": "Translate for Zotero", "version": "2.4.8", "optional": false,
+      "id": "zoteropdftranslate@euclpts.com", "file": "02-translate-for-zotero-2.4.8.xpi",
+      "url": "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.4.8/translate-for-zotero.xpi",
+      "homepage": "https://github.com/windingwind/zotero-pdf-translate",
+      "sha256": "8145e9972c507f6baee93b93d2c2e8e7fe24388c58f2cebe0a37e29db5de26e6"
+    },
+    {
+      "name": "Better Notes", "version": "3.3.5", "optional": true,
+      "id": "Knowledge4Zotero@windingwind.com", "file": "04-better-notes-3.3.5.xpi",
+      "url": "https://github.com/windingwind/zotero-better-notes/releases/download/v3.3.5/better-notes-for-zotero.xpi",
+      "homepage": "https://github.com/windingwind/zotero-better-notes",
+      "sha256": "7dbe38c994608c5864ac76a33c500315db3361904b9f6f92bd5f78565c32c390"
+    },
+    {
+      "name": "Ethereal Style", "version": "6.0.110", "optional": true,
+      "id": "zoterostyle@polygon.org", "file": "05-zotero-style-6.0.110.xpi",
+      "url": "https://gitee.com/MuiseDestiny/plugins/raw/b636b0cb94e691a8eade68c9d333cce80d8e4eb6/zotero-style.xpi",
+      "homepage": "https://github.com/MuiseDestiny/zotero-style",
+      "sourceRevision": "b636b0cb94e691a8eade68c9d333cce80d8e4eb6",
+      "sha256": "7ced141faafd621efee5036129ec0e2169a5cca522969da841f05a212eacafa6"
+    }
+  ]
+}

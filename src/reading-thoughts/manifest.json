@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "阅读随想",
+  "version": "1.1.0",
+  "description": "选文后按 Alt+Q 打开菜单：写思路、添加到对话、在右侧翻译。",
+  "author": "Zotero Reading Setup contributors",
+  "homepage_url": "https://github.com/JinPengLGM/zotero-reading-setup",
+  "applications": {
+    "zotero": {
+      "id": "reading-thoughts@local",
+      "update_url": "https://reading-thoughts.invalid/updates.json",
+      "strict_min_version": "10.0",
+      "strict_max_version": "10.*"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+name: Check and build
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - run: npm run check
+      - run: npm test
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Build XPI with Windows PowerShell 5
+        shell: powershell
+        run: .\scripts\build.ps1
+      - name: Verify package layout
+        shell: pwsh
+        run: |
+          Add-Type -AssemblyName System.IO.Compression.FileSystem
+          $file = Get-ChildItem -LiteralPath dist -Filter '*.xpi' | Select-Object -First 1
+          $zip = [IO.Compression.ZipFile]::OpenRead($file.FullName)
+          try {
+            foreach ($name in @('manifest.json','bootstrap.js','preset-config.json','setup-preset.js','reader-sidebar.css','LICENSE','vendor/highlight-LICENSE')) {
+              if (!$zip.GetEntry($name)) { throw "Missing root entry: $name" }
+            }
+          } finally { $zip.Dispose() }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reading-thoughts-xpi
+          path: dist/*.xpi

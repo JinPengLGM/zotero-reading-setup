@@ -1,0 +1,26 @@
+/* Reader sidebar: LLM and Translate only.
+ * LLM-for-Zotero's native Independent layout handles switching between views.
+ * Scoped to the PDF/EPUB reader; library metadata remains available.
+ */
+
+#zotero-context-pane-sidenav .pin-wrapper:not(:has([data-pane*="zotero-llm"])):not(:has([data-pane*="zoteropdftranslate"])),
+#zotero-context-pane-sidenav .divider {
+  display: none !important;
+}
+
+#zotero-context-pane item-pane-header,
+#zotero-context-pane .zotero-view-item > [data-pane]:not(.llm-dedicated-chat-pane):not(:has(translator-plugin-panel)) {
+  display: none !important;
+}
+
+/* Avoid Zotero's scroll-to-section spacer in either single-panel view. */
+#zotero-context-pane .zotero-view-item::before,
+#zotero-context-pane .zotero-view-item::after {
+  display: none !important;
+}
+
+/* The Translate panel begins immediately at the top of its own view. */
+:root[data-llm-pane-view="details"] #zotero-context-pane .zotero-view-item {
+  padding-top: 0 !important;
+  scroll-padding-top: 0 !important;
+}
